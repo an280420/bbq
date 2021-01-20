@@ -9,3 +9,9 @@ import "channels"
 
 Rails.start()
 ActiveStorage.start()
+
+
+import '../scss/site'// JS
+import '../js/site' // Images
+const images = require.context('../images', true)
+const imagePath = (name) => images(name, true)

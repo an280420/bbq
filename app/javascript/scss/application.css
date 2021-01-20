@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
@@ -18,16 +19,16 @@
 .buffer-top {
     margin-top: 20px;
   }
-  
+
   .buffer-bottom {
     margin-bottom: 20px;
   }
-  
+
   .buffer-both {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   /* Avatars for users & events */
   .img-icon, .img-icon-small {
     height: 50px;
@@ -43,15 +44,14 @@
     overflow: hidden;
     border-radius: 5px;
   }
-  
+
   .thumbnail h3 {
     white-space: nowrap;
     overflow: hidden;
     margin-top: 0;
     margin-bottom: .3em;
   }
-  
+
   .thumbnail-inner {
     padding: 20px 4px 4px;
   }
-  
