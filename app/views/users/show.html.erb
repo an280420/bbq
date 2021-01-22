@@ -2,8 +2,11 @@
   <h1><%= @user.name %></h1>
 
   <p class="buffer-top">
-  <%= link_to "Редактировать профиль", edit_user_path(@user),
-    class: 'btn btn-default' %>
+    <%= image_tag user_avatar(@user) %>
+  </p>
+
+  <p class="buffer-top">
+    <%= link_to "Редактировать профиль", edit_user_path(@user), class: 'btn btn-default' %>
   </p>
 
   <div class="row">
