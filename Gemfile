@@ -9,6 +9,8 @@ gem 'devise'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
+gem 'uglifier'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
