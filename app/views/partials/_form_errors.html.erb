@@ -1,7 +1,7 @@
 <% errors = model.errors %>
 
 <% if errors.any? %>
-  <div class="alert alert-danger">
+  <div class="alert alert-danger alert-dismissible fade show">
     <div class="lead buffer-bottom">
       В вашей форме <%= errors.count %> ошибок
     </div>
@@ -11,5 +11,6 @@
         <li><%= message %></li>
       <% end %>
     </ul>
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
   </div>
 <% end %>
