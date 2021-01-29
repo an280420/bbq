@@ -71,6 +71,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.9.2)
+      devise (>= 4.7.1)
     erubi (1.10.0)
     execjs (2.7.0)
     globalid (0.4.2)
@@ -177,6 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
+  devise-i18n
   pg
   pry-rails
   puma (~> 5.0)
