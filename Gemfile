@@ -7,7 +7,7 @@ gem 'rails', '~> 6.1.0'
 
 gem 'devise'
 gem 'devise-i18n'
-gem 'russian'
+gem 'rails-i18n'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
