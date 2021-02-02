@@ -11,6 +11,6 @@ class User < ApplicationRecord
   private
 
   def set_name
-    self.name = "Пользователь №#{rand(555)}" if self.name.blank?
+    self.name = "#{I18n.t('activerecord.models.user')} №#{rand(555) }" if self.name.blank?
   end
 end

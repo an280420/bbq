@@ -40,4 +40,33 @@ ru:
       one: 'В вашей форме одна ошибка'
       few: 'В вашей форме %{count} ошибки'
       many: 'В вашей форме %{count} ошибок'
+    forms:
+      save: 'Сохранить'
+      or: 'или'
+      back: 'Вернутья'
 
+  views:
+    users:
+      edit:
+        title: 'Редактирование профиля'
+        change_pass: 'Сменить пароль'
+      show:
+        edit: 'Редактировать профиль'
+        event: 'Организовал:'
+        status: 'Пользователь пока не организовал ни одного события'
+
+    layouts:
+      application:
+        profile: 'Профиль'
+        sign_out: 'Выйти'
+        sign_in: 'Войти'
+        sign_up: 'Зарегистрироваться'
+
+    events:
+      show:
+        edit: 'Изменить'
+        delete: 'Удалить'
+      index:
+        create: 'Создать событие'
+      edit:
+        title: 'Редактировать профиль'
