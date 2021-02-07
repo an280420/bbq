@@ -83,6 +83,8 @@ ru:
       comment:
         destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
 
-    subscriptions:
-      subscription:
-        destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+    form:
+      subscribe_btn: 'Подписаться'
