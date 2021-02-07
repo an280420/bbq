@@ -82,6 +82,9 @@ ru:
     comments:
       comment:
         destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+      form:
+        body: 'Комментарий'
+        user_name: 'Автор комментария'
 
   subscriptions:
     subscription:
