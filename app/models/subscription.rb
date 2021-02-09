@@ -7,7 +7,7 @@ class Subscription < ApplicationRecord
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
-  validates :user_email, exclusion: { in: User.all.map(&:email) }, unless: -> { user.present? }
+  validate :email_exists, unless: -> { user.present? }
 
   def user_name
     if user.present?
@@ -29,5 +29,11 @@ class Subscription < ApplicationRecord
 
   def event_user
     [event.user]
+  end
+
+  def email_exists
+    if User.exists?(email: user_email)
+      errors.add(:user_email, :email_of_exsisting_user)
+    end
   end
 end

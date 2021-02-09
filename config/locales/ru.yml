@@ -19,6 +19,15 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
 
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              email_of_exsisting_user: 'содержит уже зарегистрированный адрес. Если это ваш адрес, то войдите под своим именем перед подпиской на событие'
+
+
+
   # Перевод сообщений, которые отправляет контроллер
   controllers:
     events:
