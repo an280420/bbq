@@ -12,6 +12,8 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
 gem 'uglifier'
+gem 'carrierwave', '~> 2.0'
+gem 'rmagick'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
