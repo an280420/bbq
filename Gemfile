@@ -14,6 +14,7 @@ gem 'webpacker', '~> 5.0'
 gem 'uglifier'
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
