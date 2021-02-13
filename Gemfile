@@ -16,6 +16,9 @@ gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
 gem 'fog-aws'
 
+gem 'mailjet'
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'pry-rails'
