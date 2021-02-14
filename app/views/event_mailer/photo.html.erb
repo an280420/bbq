@@ -1,4 +1,4 @@
-<h1><%= t '.title' %></h1>
+<h1><%= t ('.title'), title: @event.title %></h1>
 
 <p>Фото добавил: <%= @photo.user.name %></p>
 <p><%= image_tag @photo.photo.thumb.url %></p>
