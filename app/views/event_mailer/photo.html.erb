@@ -1,0 +1,15 @@
+<h1><%= t '.title' %></h1>
+
+<p>Фото добавил: <%= @photo.user.name %></p>
+<p><%= image_tag @photo.photo.thumb.url %></p>
+<hr/>
+
+<%= t '.event' %>
+
+<h3><%= @event.title %></h3>
+
+<%= t '.author' %>
+<h4><%= l @event.datetime %></h4>
+
+<%= t '.owner' %>
+<h4><%= @event.user.name %></h4>
