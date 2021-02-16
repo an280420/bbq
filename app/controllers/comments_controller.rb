@@ -41,12 +41,7 @@ class CommentsController < ApplicationController
   end
 
   def notify_subscribers(event, comment)
-
-    if comment.user.present?
-      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq - [comment.user.email]
-    else
-      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
-    end
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq - [comment.user&.email]
 
     all_emails.each do |mail|
       EventMailer.comment(event, comment, mail).deliver_now
