@@ -1,10 +1,11 @@
 Новое фото
+<%= t ('title'), title: @event.title %>
 ----
 
-Домабавил <%= @photo.user.name %>
+Добавил <%= @photo.user.name %>
 
 ----------------------
 
-Событие: <%= @event.title %>
-Состоится: <%= l @event.datetime %>
-Организатор: <%= @event.user.name %>
+<%= t '.event' %>: <%= @event.title %> <%= events_url(@event) %>
+<%= t '.datetime' %>: <%= l @event.datetime %>
+<%= t '.owner' %>:: <%= @event.user.name %>
