@@ -16,7 +16,7 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div class="form-group"">
+      <div class="form-group">
         <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
         <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
         <% if @minimum_password_length %>
