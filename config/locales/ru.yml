@@ -64,7 +64,7 @@ ru:
   # Перевод названия приложения и компании-разработчика
   app:
     name: 'Шашлыки'
-    company: 'Хороший программист'
+    company: 'Антон Некрасов'
 
   global:
     confirm:
@@ -78,38 +78,44 @@ ru:
       or: 'или'
       back: 'Вернутья'
 
-  views:
-    users:
-      edit:
-        title: 'Редактирование профиля'
-        change_pass: 'Сменить пароль'
-      show:
-        edit: 'Редактировать профиль'
-        event: 'Организовал:'
-        status: 'Пользователь пока не организовал ни одного события'
+  users:
+    edit:
+      title: 'Редактирование профиля'
+      change_pass: 'Сменить пароль'
+    show:
+      edit: 'Редактировать профиль'
+      event: 'Организовал:'
+      status: 'Пользователь пока не организовал ни одного события'
 
-    layouts:
-      application:
-        profile: 'Профиль'
-        sign_out: 'Выйти'
-        sign_in: 'Войти'
-        sign_up: 'Зарегистрироваться'
+  layouts:
+    application:
+      profile: 'Профиль'
+      sign_out: 'Выйти'
+      sign_in: 'Войти'
+      sign_up: 'Зарегистрироваться'
 
-    events:
-      show:
-        edit: 'Изменить'
-        delete: 'Удалить'
-      index:
-        create: 'Создать событие'
-      edit:
-        title: 'Редактировать профиль'
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+    form:
+      body: 'Комментарий'
+      user_name: 'Автор комментария'
+      submit: 'Отправить'
 
-    comments:
-      comment:
-        destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
-      form:
-        body: 'Комментарий'
-        user_name: 'Автор комментария'
+  events:
+    show:
+      edit: 'Изменить'
+      delete: 'Удалить'
+    index:
+      create: 'Создать событие'
+    edit:
+      title: 'Редактировать событие'
+    password_form:
+      title: 'Доступ только по пин-коду'
+      pincode: 'Пин-код'
+      submit: 'Отправить'
+      to_main: 'На главную'
+        
 
   subscriptions:
     subscription:
