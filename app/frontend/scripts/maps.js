@@ -2,6 +2,12 @@ ymaps.ready(init);
 var myMap;
 
 function init(){
+  mapElement = document.getElementById('map');
+
+  if (!mapElement) {
+      return;
+  }
+
   address = document.getElementById('map').getAttribute('data-address');
 
   myMap = new ymaps.Map("map", {
