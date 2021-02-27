@@ -115,7 +115,11 @@ ru:
       pincode: 'Пин-код'
       submit: 'Отправить'
       to_main: 'На главную'
-        
+
+  photos:
+    photo:
+      add: 'Добавил'
+      confirm: 'Уверены, что хотите удалить фото?'
 
   subscriptions:
     subscription:

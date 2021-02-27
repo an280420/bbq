@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bbq</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=990703b2-69ee-4247-82af-baa8fc5a243a&lang=ru_RU" type="text/javascript"></script>
-    <script src="https://use.fontawesome.com/7ab699d630.js"></script>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+<head>
+  <title>Bbq</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_pack_tag 'application', media: 'all' %>
 
-  <body>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=990703b2-69ee-4247-82af-baa8fc5a243a&lang=ru_RU" type="text/javascript"></script>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <%= link_to t('app.name'), root_path, class: "navbar-brand" %>
+  <%= javascript_pack_tag 'application' %>
+
+  <script src="https://use.fontawesome.com/7ab699d630.js"></script>
+
+  <!--    lightbox-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" crossorigin="anonymous"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <%= link_to t('app.name'), root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
