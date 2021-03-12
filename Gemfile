@@ -14,7 +14,6 @@ gem 'webpacker', '~> 5.0'
 gem 'uglifier'
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick'
-gem "mini_magick"
 gem 'fog-aws'
 
 gem 'mailjet'
