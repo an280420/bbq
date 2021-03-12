@@ -252,6 +252,7 @@ DEPENDENCIES
   dotenv-rails
   fog-aws
   mailjet
+  mini_magick
   pg
   pry-rails
   puma (~> 5.0)
