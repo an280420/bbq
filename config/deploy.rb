@@ -4,6 +4,8 @@ lock "~> 3.16.0"
 set :application, "bbq"
 set :repo_url, "git@github.com:an280420/bbq.git"
 
+Rake::Task["deploy:assets:backup_manifest"].clear_actions
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
