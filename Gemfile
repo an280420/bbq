@@ -28,3 +28,9 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+group :development do
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
+end
+
