@@ -17,39 +17,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
+  <div class="wrapper flex-grow-1">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <%= link_to t('app.name'), root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <%= link_to t('app.name'), root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to t('.profile'), current_user, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "nav-link" %></li>
+          <% else %>
+            <li class="nav-item"><%= link_to t('.sign_in'), new_user_session_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to t('.sign_up'), new_user_registration_path, class: "nav-link" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <%= bootstrap_flash %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to t('.profile'), current_user, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete, class: "nav-link" %></li>
-        <% else %>
-          <li class="nav-item"><%= link_to t('.sign_in'), new_user_session_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to t('.sign_up'), new_user_registration_path, class: "nav-link" %></li>
-        <% end %>
-      </ul>
+      <%= yield %>
     </div>
-  </nav>
+  </div>
+  <footer class="container-fluid p-3 bg-dark text-light">
+    <p>&copy; <%= t('app.company') %> 2021 </p>
+  </footer>
+</body>
 
-  <div class="container-fluid">
-        <%= bootstrap_flash %>
-
-        <%= yield %>
-
-    <footer>
-      <p>&copy; <%= t('app.company') %> 2021 </p>
-    </footer>
-
-  </div> <!-- /container -->
-
-
-  </body>
 </html>
-
