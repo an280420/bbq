@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_event, only: [:show]
-  # before_action :set_current_user_event, only: [:edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :password_guard!, only: [:show]
   after_action :verify_authorized, only: [:edit, :update, :destroy, :show]
 
@@ -61,11 +60,6 @@ class EventsController < ApplicationController
 
   private
 
-  # def set_current_user_event
-  #   @event = current_user.events.find(params[:id])
-  # end
-
-  # Use callbacks to share common setup or constraints between actions.
   def set_event
     @event = Event.find(params[:id])
   end
