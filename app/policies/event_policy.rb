@@ -13,7 +13,7 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    user.present?
+    true
   end
   
   class Scope < Scope
