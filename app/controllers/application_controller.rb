@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
   # Позволяем использовать возможности пандита во всех контроллерах
   include Pundit
 
+  # Обработать ошибку авторизации
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -22,5 +25,12 @@ class ApplicationController < ActionController::Base
       :account_update,
       keys: [:password, :password_confirmation, :current_password]
     )
+  end
+
+  def user_not_authorized
+    # Перенаправляем юзера откуда пришел (или в корень сайта)
+    # с сообщением об ошибке (для секьюрности сообщение ЛУЧШЕ опустить!)
+    flash[:alert] = t('pundit.not_authorized')
+    redirect_to(request.referrer || root_path)
   end
 end

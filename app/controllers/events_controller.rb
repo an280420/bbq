@@ -3,7 +3,6 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show]
   # before_action :set_current_user_event, only: [:edit, :update, :destroy]
   before_action :password_guard!, only: [:show]
-
   after_action :verify_authorized, only: [:edit, :update, :destroy, :show]
 
   # GET /events
