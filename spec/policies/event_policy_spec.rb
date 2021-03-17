@@ -32,6 +32,6 @@ RSpec.describe EventPolicy, type: :policy do
   permissions :show? do
     it { is_expected.to permit(user, event) }
     it { is_expected.not_to permit(nil, event) }
-    it { is_expected.not_to permit(other_user, event) }
+    it { is_expected.to permit(other_user, event) }
   end
 end

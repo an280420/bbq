@@ -1,11 +1,11 @@
 class EventPolicy < ApplicationPolicy
   
-  def edit?
-    update?
+  def update?
+    user_is_owner?
   end
 
-  def update?
-    user.present? && record.user == user
+  def edit?
+    update?
   end
 
   def destroy?
@@ -13,7 +13,7 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    update?
+    user.present?
   end
   
   class Scope < Scope
@@ -24,7 +24,7 @@ class EventPolicy < ApplicationPolicy
 
   private
 
-  def user_is_owner?(event)
-    user.present? && (event.try(:user) == user)
+  def user_is_owner?
+    user.present? && record.user == user
   end
 end
