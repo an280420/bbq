@@ -5,23 +5,24 @@ ruby '2.7.2'
 
 gem 'rails', '~> 6.1.0'
 
-gem 'carrierwave', '~> 2.0'
-gem 'dotenv-rails'
 gem 'devise'
 gem 'devise-i18n'
-gem 'fog-aws'
-gem 'mailjet'
-gem 'puma', '~> 5.0'
-gem 'pundit'
 gem 'rails-i18n'
-gem 'rmagick'
-gem 'uglifier'
+gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
+gem 'uglifier'
+gem 'carrierwave', '~> 2.0'
+gem 'rmagick'
+gem 'fog-aws'
+
+gem 'mailjet'
+gem 'dotenv-rails'
+gem 'pundit'
+
 group :development, :test do
-  gem 'pry-rails'
-  gem 'rspec-rails'
   gem 'sqlite3', '~> 1.4'
+  gem 'pry-rails'
 end
 
 group :production do
