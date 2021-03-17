@@ -11,16 +11,12 @@ gem 'devise-i18n'
 gem 'dotenv-rails'
 gem 'fog-aws'
 gem 'mailjet'
-<<<<<<< HEAD
-gem 'dotenv-rails'
 gem 'pundit'
-=======
 gem 'puma', '~> 5.0'
 gem 'rails-i18n'
 gem 'rmagick'
 gem 'uglifier'
 gem 'webpacker', '~> 5.0'
->>>>>>> master
 
 group :development, :test do
   gem 'pry-rails'
