@@ -18,6 +18,7 @@ gem 'fog-aws'
 
 gem 'mailjet'
 gem 'dotenv-rails'
+gem 'pundit'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
