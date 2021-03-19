@@ -27,6 +27,10 @@ class ApplicationController < ActionController::Base
     )
   end
 
+  def pundit_user
+    UserContext.new(current_user, cookies)
+  end
+
   def user_not_authorized
     # Перенаправляем юзера откуда пришел (или в корень сайта)
     # с сообщением об ошибке (для секьюрности сообщение ЛУЧШЕ опустить!)

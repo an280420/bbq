@@ -1,7 +1,6 @@
 class EventPolicy < ApplicationPolicy
-  
   def update?
-    user_is_owner?
+    user.present? && record.user == user
   end
 
   def edit?
@@ -13,7 +12,9 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    (record.pincode.blank? ||
+    (user.present? && user == record.user)) ||
+    record.pincode_valid?(cookies["events_#{record.id}_pincode"])
   end
   
   def new?
@@ -28,11 +29,5 @@ class EventPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-  end
-
-  private
-
-  def user_is_owner?
-    user.present? && record.user == user
   end
 end
