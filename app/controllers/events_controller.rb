@@ -21,6 +21,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = current_user.events.build
+    authorize @event
   end
 
   # GET /events/1/edit
@@ -31,6 +32,7 @@ class EventsController < ApplicationController
   # POST /events
   def create
     @event = current_user.events.build(event_params)
+    authorize @event
 
     if @event.save
       redirect_to @event, notice: I18n.t('controllers.events.created')
