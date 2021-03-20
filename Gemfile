@@ -9,20 +9,20 @@ gem 'carrierwave', '~> 2.0'
 gem 'devise'
 gem 'devise-i18n'
 gem 'dotenv-rails'
-gem 'factory_bot_rails'
 gem 'fog-aws'
 gem 'mailjet'
 gem 'pundit'
 gem 'puma', '~> 5.0'
 gem 'rails-i18n'
 gem 'rmagick'
-gem 'shoulda-matchers'
 gem 'uglifier'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'sqlite3', '~> 1.4'
 end
 
