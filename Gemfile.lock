@@ -110,6 +110,8 @@ GEM
     erubi (1.10.0)
     excon (0.79.0)
     execjs (2.7.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
     ffi (1.15.0)
     fog-aws (3.9.0)
       fog-core (~> 2.1)
@@ -298,6 +300,7 @@ DEPENDENCIES
   devise
   devise-i18n
   dotenv-rails
+  factory_bot
   fog-aws
   mailjet
   pg
