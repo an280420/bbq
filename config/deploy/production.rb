@@ -3,10 +3,9 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "128.199.42.15", user: "deploy", roles: %w[app db web resque_worker]
+server "eventsboard.site", user: "deploy", roles: %w[app db web resque_worker]
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-
 
 
 # role-based syntax
@@ -22,7 +21,6 @@ server "128.199.42.15", user: "deploy", roles: %w[app db web resque_worker]
 # role :db,  %w{deploy@example.com}
 
 
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -30,7 +28,6 @@ server "128.199.42.15", user: "deploy", roles: %w[app db web resque_worker]
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
 
 
 # Custom SSH Options
