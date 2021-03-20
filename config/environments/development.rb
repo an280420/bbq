@@ -65,5 +65,5 @@ Rails.application.configure do
 
   config.active_job.queue_adapter = :resque
   # Префикс для имени очередей
-  config.active_job.queue_name_prefix = "tubilinkz_#{Rails.env}"
+  config.active_job.queue_name_prefix = "bbq_#{Rails.env}"
 end
