@@ -38,5 +38,6 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano-bundler', '~> 2.0'
+  gem 'letter_opener'
 end
 
