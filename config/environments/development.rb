@@ -63,4 +63,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :mailjet
 
+  config.active_job.queue_adapter = :resque
+  # Префикс для имени очередей
+  config.active_job.queue_name_prefix = "tubilinkz_#{Rails.env}"
 end
