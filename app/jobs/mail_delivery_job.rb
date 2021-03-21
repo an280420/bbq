@@ -1,10 +1,6 @@
 class MailDeliveryJob < ApplicationJob
   queue_as :default
 
-  def perform(link)
-    Link.increment_counter(:clicks, link.id)
-  end
-
   def perform(event, entity, mail='')
     name_of_entity = entity.class.to_s
     if name_of_entity == "Comment"
