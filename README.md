@@ -1,24 +1,40 @@
-# README
+# Приложение BBQ (шашлыки)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+В данном приложении вы можете создавать "События", на которые могут подписываться как ваши друзья, так и другие, желающие поучавстовать люди.
 
-Things you may want to cover:
+Если же вы хотите, чтобы доступ имели только друзья, то можете защитить доступ к событию при помощи пин-кода.
 
-* Ruby version
+### Требования
 
-* System dependencies
+Данное приложение реализовано на языке Ruby 2.7.2 и RoR 6.1.0
 
-* Configuration
+### Пример работающего приложения
 
-* Database creation
+Работающее приложение вы можете найти 
 
-* Database initialization
+heroku: https://bbqfromurals.herokuapp.com/
 
-* How to run the test suite
+VPS: http://eventsboard.site/
 
-* Services (job queues, cache servers, search engines, etc.)
+### Запуск приложения
 
-* Deployment instructions
+1. Скопируйте приложение:
 
-* ...
+```
+$ git clone git@github.com:cyprus11/bbq.git
+```
+
+Или просто скачайте его на свой компьютер.
+
+2. Установите необходимые гемы, создайте базу данных и сделайте необходимые миграции, создайте файл ```config/database.yml``` - 
+в данном файле необходимо прописать настройки для подключения к вашей БД, [тут можно прочитать как это сделать](https://edgeguides.rubyonrails.org/configuring.html#configuring-a-database)
+После настройки параметров подключения к БД, выполните следующие действия в консоли:
+
+```
+$ bundle
+$ yarn
+$ rails db:create
+$ rails db:migrate
+```
+
+
