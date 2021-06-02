@@ -18,6 +18,7 @@ gem 'resque'
 gem 'rmagick'
 gem 'uglifier'
 gem 'webpacker', '~> 5.0'
+# gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 
 group :development, :test do
   gem 'factory_bot_rails'
@@ -40,4 +41,3 @@ group :development do
   gem 'capistrano-bundler', '~> 2.0'
   gem 'letter_opener'
 end
-
